@@ -18,7 +18,43 @@
     <a class="brand" href="/">
       <img src="/assets/logo.svg" alt="Midnight Relay logo" width="28" height="28" />
       <span>Midnight Relay</span>
-    </a>
+    </a>/*
+  # Caching
+  Cache-Control: public, max-age=31536000, immutable# --- Core Routes ---
+/halloween     /halloween.html      200
+/shop          /shop.html           200
+/about         /about.html          200
+/projects      /projects.html       200
+/contact       /contact.html        200
+
+# --- Subdomain Routing ---
+https://halloween.midnight-relay.org/*   /halloween.html   200
+https://shop.midnight-relay.org/*        /shop.html        200
+
+# --- Shopify Store Redirect ---
+/store         https://shop.midnight-relay.org/    301
+
+# --- Catch-all (Fallback) ---
+/*             /index.html           200
+
+
+  # Security Headers
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: no-referrer-when-downgrade
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+
+  # Content Security Policy
+  Content-Security-Policy: default-src 'self' https:; script-src 'self' https://*.netlify.app https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.netlify.com; frame-ancestors 'none';
+
+  # Color Scheme
+  Color-Scheme: dark light
+
+  # Theme color for browsers
+  Theme-Color: #00ffff
+
     <nav>
       <a href="/projects.html">Projects</a>
       <a href="/shop.html" target="_blank" rel="noopener">Store</a>
