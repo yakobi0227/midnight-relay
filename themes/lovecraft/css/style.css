@@ -25,4 +25,4 @@ a{color:inherit;text-decoration:none}
 .contact{max-width:720px;margin-top:14px;background:var(--glass);border:1px solid rgba(255,255,255,.08);padding:18px;border-radius:18px}
 .contact .row{display:flex;gap:12px;flex-wrap:wrap}
 .contact input,.contact textarea{width:100%;margin-top:6px;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.16);background:#0c1114;color:var(--fg)}
-.footer{padding:40px 22px;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,.06);margin-top:14vh}
+.footer{padding:40px 22px;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,.06);margin-top:14vh}.nav a:focus-visible,.btn:focus-visible{outline:2px solid currentColor;outline-offset:2px}.nav a.active{background:rgba(61,244,178,.16);opacity:1}
