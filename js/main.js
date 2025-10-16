@@ -2,7 +2,7 @@
 
 
 // Set your Shopify storefront URL here (e.g. https://your-store.myshopify.com or https://shop.midnight-relay.org)
-window.SHOPIFY_STORE_URL = window.SHOPIFY_STORE_URL || "https://your-store.myshopify.com";
+window.SHOPIFY_STORE_URL = "https://shop.midnight-relay.org";
 
 (function(){
   const yearEl = document.getElementById('year');
